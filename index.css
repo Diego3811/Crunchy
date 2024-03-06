@@ -1,6 +1,128 @@
-*{
-    padding: 0;
-    margin: 0;
+:root{
+    --header-color: #23252b;
+    --font-size-nav: 1rem;
+    --color-logo:#f47521;
+    --flecha-nav-size:1.5rem;
+    --logo-size: 8.5rem;
+    --header-size: 3.75rem;
 }
 
-  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: Lato, Helvetica Neue,helvetica;
+}
+/* Tamaños de iconos del header */
+
+.header-svg-icon{
+    height: var(--flecha-nav-size);
+    fill: #fff;
+}
+
+/* logo de la pagina */
+.logo-icon{
+    width: var(--logo-size);
+    fill: var(--color-logo);
+    transition: .3s ease-in-out;
+}
+
+.logo,
+.logo a,
+.logo a .logo-icon{
+    height: 100%;
+}
+
+/* section header */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-size);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6rem;
+    background-color: var(--header-color);
+}
+
+header .nav-first{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    cursor: pointer;
+}
+
+.nav-first ul li{
+    display: inline-flex;
+    align-items: center;
+    padding: 0 16px;
+    cursor: pointer;
+    height: 100%;
+    gap: 4px;
+}
+
+.nav-first ul{
+    padding-left: 15px;
+    height: 100%;
+}
+
+.nav-first ul li a{
+    text-decoration: none;
+    color: #fff;
+    width: 100%;
+    font-size: var(--font-size-nav);
+}
+
+.logo a{
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+/* nav-second */
+
+.nav-second{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-second a{
+    height: 100%;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-second a img{
+    width: 33px;
+    height: 33px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.nav-second .user{
+    display: flex;
+    column-gap: 5px;
+}
+
+
+/* hover */
+
+.nav-first ul li:hover{
+    background-color: rgba(0,0,0,0.5);
+}
+
+.logo a .logo-icon:hover{
+    fill: #fff;
+}
+.nav-second a:hover{
+    background-color: rgba(0,0,0,0.5);
+}
