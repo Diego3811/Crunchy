@@ -15,7 +15,9 @@
 
 
 body{
+    background-color: #000;
     font-family: Lato, Helvetica Neue,helvetica;
+    overflow-x: hidden;
 }
 /* Tamaños de iconos del header */
 
@@ -37,6 +39,10 @@ body{
     height: 100%;
 }
 
+.logo{
+    padding-right: 15px;
+}
+
 /* section header */
 
 header{
@@ -50,6 +56,7 @@ header{
     align-items: center;
     padding: 0 6rem;
     background-color: var(--header-color);
+    z-index: 1000;
 }
 
 header .nav-first{
@@ -69,7 +76,6 @@ header .nav-first{
 }
 
 .nav-first ul{
-    padding-left: 15px;
     height: 100%;
 }
 
@@ -114,15 +120,713 @@ header .nav-first{
 }
 
 
+/* section del hero carrusel */
+
+section{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.flechas{
+    padding: 0 30px;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.flechas a{
+    font-size: 35px;
+    color: #fff;
+}
+
+.container-anime{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.container-carrusel{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+/* background negro del carrusel */
+
+.bg__carrusel{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(255,255,255,.01) 100%);
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.anime-info a img{
+    width: 400px;
+}
+
+.anime-info{
+    max-width: 700px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left:80px;
+    position: relative;
+    z-index: 100;
+    margin-top: 3%;
+}
+
+
+.img{
+    position: absolute;
+    top: 6%;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+   
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+.anime-info span{
+    display: block;
+    margin-top: 20px;
+    color: gray;
+    text-transform: capitalize;
+    font-size: 15px;
+}
+
+.anime-info p{
+    margin-top: 15px;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 25px;
+    max-width: 600px;
+
+}
+
+.anime-info .btns{
+    width: auto;
+    display: flex;
+    margin-top: 30px;
+    column-gap: 10px;
+}
+
+.anime-info .btns a{
+    color: #000;
+    background-color: #f47521;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.btns .cta:nth-child(2){
+    background-color: transparent;
+    border: 3px solid #f47521;
+    color: #f47521;
+    padding: 5px;
+}
+
+.btns .cta ion-icon{
+    font-size: 22px;
+}
+
+.btns a{
+    display: flex;
+    align-items: center;
+    column-gap: 3px;
+}
+
+.btns-2{
+    width: 40%;
+    margin-top: 50px;
+}
+
+.btns-2 button{
+    width: 30px;
+    height: 10px;
+    border-radius: 10px;
+    background-color: gray;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* seccion 2 */
+
+.section-2{
+    padding: 60px 80px;
+    height: auto;
+}
+
+.section-2 .title{
+    font-size: 1.7rem;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.container__carrusel{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    column-gap: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.card__anime{
+    position: relative;
+    width: 249px;
+    height: 428px;
+    cursor: pointer;
+}
+
+.container__img{
+    width: 100%;
+    height: 100%;
+}
+
+.container__img img{
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    transition: .2s ease;
+}
+
+.card__anime .container__info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.container__info .container__info-anime p:first-child{
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 600;
+    color:#fff;
+}
+
+.container__info .container__info-anime .season{
+    margin-top: 5px;
+}
+
+.container__info .btns__anime{
+    display: flex;
+    column-gap: 10px;
+}
+
+.container__info .btns__anime a{
+    font-size: 25px;
+    color: #f47521;
+}
+
+
+
+.container__info-anime span{
+    color: #fff;
+    font-size: 15px;
+}
+
+.container__info-anime .season,
+.container__info-anime .ep{
+    color: gray;
+    font-size: 14px;
+}
+
+.container__info-anime .descr{
+    margin-top: 10px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+}
+
+
+.paragraphs__end{
+    margin-top: 5px;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    transition: .2s ease;
+}
+
+.card__anime .paragraphs__end .title__card{
+    font-size: 15px;
+    color: #fff;
+    font-weight: 500;
+}
+
+.card__anime .paragraphs__end .paragraph__card{
+    font-size: 14px;
+    margin-top: 4px;
+    font-weight: 500;
+    color: gray;
+}
+
+.container__init{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.left-arrow2,
+.right-arrow2{
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    transition: all .3s ease;
+    cursor: pointer;
+    z-index: 100;
+}
+.left-arrow2:hover,
+.right-arrow2:hover {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.left-arrow2 a,
+.right-arrow2 a{
+    font-size: 30px;
+    color: #fff;
+}
+
+.left-arrow2{
+    display: none;
+    left: 0;
+}
+
+.right-arrow2{
+    right: 0;
+    width: 5%;
+    padding-left: 10px;
+}
+
+/* section watch */
+
+.watch{
+    padding: 0 80px;
+    width: 100%;
+    height: auto;
+}
+
+.watch .titles__watch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.titles__watch h1{
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.titles__watch a{
+    text-decoration: none;
+    color: gray;
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    text-transform: uppercase;
+    font-size: 13px;
+    transition: .2s ease;
+}
+
+.container-watch{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.container-watch .card-play{
+    position: relative;
+    width: 300px;
+    height: auto;
+    color: #fff;
+}
+
+.card-play .anime-img img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-play p{
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: gray;
+    margin: 10px 0;
+}
+
+.card-play h3{
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.card-play span{
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    color: gray;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.anime-img{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    height: 3px;
+    background-color: #f47521;
+}
+
+.icon-play{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.5);
+    display: grid;
+    place-items: center;
+}
+
+.icon-play a{
+    font-size: 2.2rem;
+    display: grid;
+    place-items: center;
+    color: #fff;
+}
+
+
+
+.time-anime{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    background-color: rgba(0,0,0,0.5);
+    padding: 0 4px;
+}
+
+.card-play .anime-img .time-anime p{
+    font-size: 14px;
+    text-transform: lowercase;
+    color: #fff;
+    margin: 0;
+    padding: 5px 7px;
+}
+
+/* contenido del hover de la card play */
+.card-play .card-play__absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #17181a;
+    opacity: 0;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .2s;
+}
+
+.cardplay-container .cardplay__title{
+    text-decoration: none;
+    font-size: 8px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: gray;
+    text-transform: uppercase;
+    transition: .2s ease;
+}
+
+.cardplay-container .cardplay-te{
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.cardplay-container .cardplay__date{
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   column-gap: 5px;
+   letter-spacing: 1px;
+   font-size: 12px;
+   margin-top: 5px;
+}
+
+.cardplay-container .cardplay__date ion-icon{
+    font-size: 16px;
+}
+
+.cardplay-container .cardplay__descr{
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 17px;
+    color: #fff;
+    text-transform: none;
+}
+
+.card-play__absolute .cardplay__repro{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #f47521;
+    column-gap: 4px;
+    font-size: 13px;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.card-play__absolute .cardplay__repro ion-icon{
+    font-size: 25px;
+}
+
+.watch .content-img{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.watch .content-img img{
+    cursor: pointer;
+}
+
+.section-shows{
+    height: auto;
+    padding: 60px 80px;
+}
+
+.section-shows .title-2{
+    margin-bottom: 8px;
+    color: #fff;
+    font-size: 1.7rem;
+}
+
+.section-shows .span-2{
+    display: inline-block;
+    color: gray;
+    margin-bottom: 20px;
+}
+
+.news{
+    height: auto;
+    width: 100vw;
+    padding: 20px 80px;
+}
+
+.header__news .logo-news{
+    width: 25px;
+}
+
+.header__news h2{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.6rem;
+    column-gap: 5px;
+}
+
+.header__news a{
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: rgb(167, 167, 167);
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    font-weight: bold;
+    transition: .2s ease;
+}
+
+.news .header__news{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.news .title__news{
+    color: #fff;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.news .line{
+    width: 100%;
+    background-color: rgb(104, 104, 104);
+    height: 2px;
+    margin-top: 12px;
+}
+
+.news .card__news img{
+    width: 120px;
+    object-fit: cover;
+}
+
+.news .card__news .shadow-img{
+    box-shadow: 5px -5px gray,
+    10px -10px rgb(102, 99, 99),
+    15px -15px rgb(88, 88, 88);
+}
+
+.news .anime__news{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.anime__news .card__news{
+    margin-top: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-right: 2rem;
+}
+
+.anime__news .card__news .minutes__news{
+    display: flex;
+    justify-content: end;
+}
+
+.anime__news .card__news .info__news h3{
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.anime__news .card__news .info__news span{
+    color: gray;
+    font-size: 0.8rem;
+    display: block;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.card__news .container__news{
+    display: flex;
+    column-gap: 25px;
+}
+
+.card__news .minutes__news span{
+    color: aqua;
+    font-size: 0.9rem;
+}
+
+.news .content-btn{
+    display: flex;
+    justify-content: flex-end;
+    width: 33%;
+    margin-top: 4rem;
+}
+
+.news .content-btn button{
+    padding: 12px 30px;
+    background-color: rgb(33, 57, 68);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+
+
+
+
+
+
+
+
+
 /* hover */
 
 .nav-first ul li:hover{
     background-color: rgba(0,0,0,0.5);
 }
 
-.logo a .logo-icon:hover{
+.logo:hover .logo-icon{
     fill: #fff;
 }
 .nav-second a:hover{
     background-color: rgba(0,0,0,0.5);
+}
+
+.card__anime .container__info:hover{
+    opacity: 1;
+    background-color: rgba(31, 29, 29, .9);
+}
+
+.section-2 .card__anime:hover .paragraphs__end{
+    display: none;
+}
+
+.section-2 .card__anime:hover img{
+    height: 100%;
+}
+
+.titles__watch a:hover{
+    color: #fff;
+}
+
+.header__news a:hover{
+    color: #fff;
+}
+
+.news .content-btn button:hover{
+    background-color: rgba(33, 57, 68, 0.9);
+}
+
+/* hover en la card play */
+.card-play .card-play__absolute:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.cardplay-container .cardplay__title:hover{
+    text-decoration: underline;
+    color: #fff;
 }
